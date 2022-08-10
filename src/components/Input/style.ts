@@ -1,0 +1,28 @@
+import styled from "styled-components";
+
+export const Input = styled.section`
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        height: 50px;
+        width: 450px;
+        border-radius: 2px;
+        padding: 0 10px;
+        border: none;
+        box-shadow: 2px 2px 1em rgba(0,0,0,0.2);
+        outline: 0;
+        font-size: 14px;
+    }
+
+    select {
+        border-radius: 2px;
+        padding:  0 20px;
+        border: none;
+        box-shadow: 2px 2px 1em rgba(0,0,0,0.2);
+        outline: 0;
+        font-size: 14px;
+    }
+`
