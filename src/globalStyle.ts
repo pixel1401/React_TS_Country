@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const CountriesArea =  styled.main`
-    min-height: calc(100vh) - 90px;
-`
-
-export const CountryGrid = styled.div`
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px ;
-`
-
-
 export const Loader = styled.div`
 margin: 0 auto;
 mask-type: 25px;

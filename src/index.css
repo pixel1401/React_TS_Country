@@ -1,10 +1,49 @@
 
 @import-normalize;
 
+
+
+:root {
+
+    --theme-color-light: #dfe2df;
+    --theme-color-dark: #1b0c0d;
+
+    --theme-color-text-dark: #dfe2df;
+    --theme-color-text-light: #1b0c0d;
+
+
+    --color-btn-neu: rgba(224, 224, 81, 0.4);
+    --color-dark: rgba(216, 34, 40, 0.4);
+    --color-light: rgba(41, 229, 45, 0.4);
+
+
+    --color-bg: var(--theme-color-light) ;
+    --color-text : var(--theme-color-text-light);
+
+    
+
+
+
+}
+
+
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: all 0.3s;
+}
+/* ada */
+a {
+    display: block;
+    color: inherit; 
+    text-decoration: none;
+}
+li {
+    list-style: none;
 }
 
 .container {

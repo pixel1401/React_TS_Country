@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IAllCountry } from "./models/IAllCountry";
+import { IAllCountry } from "./types/IAllCountry";
 
 
 const http = axios.create({
@@ -9,8 +9,17 @@ const http = axios.create({
 
 export const get =  {
     getAllCountries : async () => {
-        let response = await http.get('/all');
-        return response.data;
+        try{
+            let response = await http.get('/all');
+            if(response.status === 200) {
+                return response.data;
+            }
+            
+            return null;
+            
+        }catch {
+            return null;
+        }
     },
     getCountry : async (name : string)=> {
         let response = await http.get(`/name/${name}?fullText=true`);

@@ -12,5 +12,9 @@ export const Header = styled.header`
             & p {
                 cursor: pointer;
             }
+
+            & h1 {
+                color: var(--color-text);
+            }
     }
 `
