@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { get } from '../../api';
+import { get } from '../../api/api';
 import { ICountryItem } from '../../types/ICountryItem';
 import * as G from '../../globalStyle';
 import * as C from './style';

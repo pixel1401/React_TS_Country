@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IAllCountry } from "./types/IAllCountry";
+import { IAllCountry } from "../types/IAllCountry";
 
 
 const http = axios.create({

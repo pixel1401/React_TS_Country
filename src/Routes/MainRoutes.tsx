@@ -13,7 +13,8 @@ const MainRoutes = ()=> {
         {path: '/', element : <Countries/>},
         {path : '/country/:name' , element: <CountryPage />},
         {path: '/code/:code' , element: <CountryPage/>},
-        {path: '/favorite/' , element: <FavoritePage/>}
+        {path: '/favorite/' , element: <FavoritePage/>},
+        {path: '*' , element: <Countries/>}
     ])
 }
 
