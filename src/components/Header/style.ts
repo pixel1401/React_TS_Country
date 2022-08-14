@@ -14,7 +14,27 @@ export const Header = styled.header`
             }
 
             & h1 {
+                display: block;
+                margin-right: 15px;
                 color: var(--color-text);
+
+            }
+    }
+
+
+    .favorite { 
+        position: relative;
+            & span {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10px;
+                height: 10px;
+                padding: 5px;
+                border-radius: 50%;
+                background-color: var(--color-text);
+                color: var(--color-bg);
             }
     }
 `

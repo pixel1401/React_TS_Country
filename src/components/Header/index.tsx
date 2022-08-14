@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
 import { themeActions, useForm } from '../../context/ThemeContext'
+import { useAppSelector } from '../../hooks/storeHook';
 import * as C from './style'
 
 const Header = () => {
 
     const { state, dispatch } = useForm();
 
+    const favorite = useAppSelector(state=> state.favorite.count);
 
 
     const handleTheme = () => {
@@ -17,7 +20,10 @@ const Header = () => {
     return <>
         <C.Header>
             <div className='container'>
-                <h1 >Where in the World</h1>
+                <Link to={'/'}>
+                    <h1 >Where in the World</h1>
+                </Link>
+                <Link className='favorite' to={'/favorite'}>Favorite{favorite !== 0 && <span>{favorite}</span>}</Link>
                 <button onClick={() => handleTheme()}>
                     <p> {`${state.theme === 'light' ? 'dark' : 'light'} mode`}</p>
                 </button>

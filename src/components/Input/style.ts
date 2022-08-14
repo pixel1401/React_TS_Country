@@ -11,6 +11,7 @@ export const Input = styled.section`
         width: 450px;
         border-radius: 2px;
         padding: 0 10px;
+        margin-right: 15px;
         border: none;
         box-shadow: 2px 2px 1em rgba(0,0,0,0.2);
         outline: 0;
@@ -24,5 +25,15 @@ export const Input = styled.section`
         box-shadow: 2px 2px 1em rgba(0,0,0,0.2);
         outline: 0;
         font-size: 14px;
+    }
+
+
+
+    @media (max-width: 580px ) {
+        flex-direction: column;
+            & input {
+                width: 100%;
+                margin: 25px 0;
+            }
     }
 `

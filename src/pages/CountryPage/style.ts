@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 
 
-export const  CountryItem = styled.div`
+export const CountryItem = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 40px;
+        
         .flag {
+            position: relative;
             flex: 0 1 45%;
+            
             img {
                 width: 100%;
             }
@@ -59,4 +62,18 @@ export const  CountryItem = styled.div`
             margin-bottom: 30px;
         }
     }
+`
+
+
+export const FavoriteButton = styled.div`
+position: absolute;
+cursor: pointer;
+                top: 5px;
+                right: 5px;
+                color: var(--color-text);
+                font-size: 40px;
+                text-shadow: 1px 1px 1em  rgba(0,0,0,5.2);
+        &.active {
+            color: red;
+        }
 `

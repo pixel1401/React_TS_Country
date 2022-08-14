@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom";
 import { useForm } from "../../context/ThemeContext";
 import { IAllCountry } from "../../types/IAllCountry"
+import { ICountryItem } from "../../types/ICountryItem";
 import * as C from './style';
 
 
-export const CountryItem = (item: IAllCountry) => {
+export const CountryItem = ({name , flags , region , capital , population}: IAllCountry | ICountryItem) => {
     const {state , dispatch} = useForm();
 
     return (
-    <Link to={`country/${item.name}`}>
+    <Link to={`/country/${name}`}>
         <C.ContainerCountry theme={state.theme} >
             <div className="img">
-                <img src={`${item.flags.png}`} alt="flags" />
+                <img src={`${flags.png}`} alt="flags" />
             </div>
             <div className="info__box">
-                <p className="info__name">{item.name}</p>
+                <p className="info__name">{name}</p>
                 {/* <p className="info__lang">{`${item.languages}`}</p> */}
-                    <p className="info__region">{item.region} {item.capital}</p>
-                <p className="info__population">{item.population}</p>
+                    <p className="info__region">{region} {capital}</p>
+                <p className="info__population">{population}</p>
             </div>
         </C.ContainerCountry>
     </Link>

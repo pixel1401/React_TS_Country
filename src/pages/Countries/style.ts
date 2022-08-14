@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CountriesArea =  styled.main`
-    min-height: calc(100vh) - 90px;
+    /* min-height: calc(100vh) - 90px; */
 `
 
 export const CountryGrid = styled.div`
@@ -9,6 +9,13 @@ export const CountryGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px ;
+
+      @media (max-width : 860px) {
+        grid-template-columns: repeat(3 , 1fr);
+      }
+      @media (max-width : 560px) {
+        grid-template-columns: repeat(2 , 1fr);
+      }
 `
 
 
