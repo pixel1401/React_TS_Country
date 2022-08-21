@@ -24,6 +24,7 @@ const Header = () => {
                     <h1 >Where in the World</h1>
                 </Link>
                 <Link className='favorite' to={'/favorite'}>Favorite{favorite !== 0 && <span>{favorite}</span>}</Link>
+                <Link to={'/weather'}>Weather</Link>
                 <button onClick={() => handleTheme()}>
                     <p> {`${state.theme === 'light' ? 'dark' : 'light'} mode`}</p>
                 </button>

@@ -1,9 +1,15 @@
 {
-  "homepage" : "https://pixel1401.github.io/React_TS_Country",
+  "homepage": "https://pixel1401.github.io/React_TS_Country",
   "name": "country_react_ts",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/style": "^0.8.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.1",
+    "@mui/styled-engine-sc": "^5.10.1",
+    "@mui/styles": "^5.9.3",
     "@reduxjs/toolkit": "^1.8.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",

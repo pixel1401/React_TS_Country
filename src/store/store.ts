@@ -2,15 +2,19 @@ import { configureStore } from "@reduxjs/toolkit";
 import { getAllCountry } from "../api/rtkApi";
 import FavoriteReducer  from "./reducers/favoriteReducer";
 import { setupListeners } from '@reduxjs/toolkit/query'
+import { weatherApi } from "../api/weatherApi";
+import { countryApi } from "../api/countryApi";
 
 
 export const store = configureStore({
     reducer : {
         favorite: FavoriteReducer,
-        [getAllCountry.reducerPath] : getAllCountry.reducer
+        [getAllCountry.reducerPath] : getAllCountry.reducer,
+        [weatherApi.reducerPath]: weatherApi.reducer,
+        [countryApi.reducerPath]: countryApi.reducer,
+
     },
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(getAllCountry.middleware),
+    
 })
 
 
